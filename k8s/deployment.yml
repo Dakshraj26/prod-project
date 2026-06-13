@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devskills
+  labels:
+    app: devskills
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devskills
+  template:
+    metadata:
+      labels:
+        app: devskills
+    spec:
+      containers:
+      - name: devskills
+        image: dsb26/devskills:v1
+        ports:
+        - containerPort: 5000

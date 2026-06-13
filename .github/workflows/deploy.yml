@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKER_USERNAME }}/first:latest
-            docker stop first || true
-            docker rm first || true
-            docker run -d -p 5000:5000 --name first ${{ secrets.DOCKER_USERNAME }}/first:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/devskills:latest
+            docker stop devskills || true
+            docker rm devskills || true
+            docker run -d -p 5000:5000 --name devskills ${{ secrets.DOCKER_USERNAME }}/devskills:latest

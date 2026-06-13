@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devskills-service
+  labels:
+    app: devskills
+spec:
+  type: ClusterIP
+  selector:
+    app: devskills
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
